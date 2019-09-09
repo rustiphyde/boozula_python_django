@@ -1,3 +1,6 @@
+<!--load tag to access static directory -->
+{% load static %}
+
 <!-- base.html file is the parent for template inheritance -->
 <!DOCTYPE html>
 <head>
@@ -7,7 +10,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <!-- main.css loaded from static directory -->
+    <link rel="stylesheet" href="{% static 'booz_blog/main.css' %}">
         {% if title %}
         <title>Booz-Blog - {{ title }}</title>
     {% else %}
