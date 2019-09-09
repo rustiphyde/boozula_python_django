@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 
 # add app configuration name located in apps.py module within app to list upon creation
 INSTALLED_APPS = [
+    'users.apps.UsersConfig',
     'booz_blog.apps.BoozBlogConfig',
     'django.contrib.admin',
     'django.contrib.auth',
