@@ -23,7 +23,7 @@ def home(request):
     }
     return render(request, 'booz_blog/home.html', context)
 def about(request):
-    return render(request, 'booz_blog/about.html')
+    return render(request, 'booz_blog/about.html', {'title': 'About'})
 
 #default Django templates directory structure
 #app_name -> templates -> app_name -> templateName.html
