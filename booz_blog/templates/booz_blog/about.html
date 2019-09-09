@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<head>
-        {% if title %}
-        <title>Booz-Blog - {{ title }}</title>
-    {% else %}
-        <title>Booz Blog</title>
-    {% endif %}
-</head>
-<body>
-    <h1>Booz-Blog About Page!</h1>    
-</body>
-</html>
+{% extends "booz_blog/base.html" %}
+{% block content %}
+    <h1>Booz-Blog About Page!</h1>
+{% endblock content %}

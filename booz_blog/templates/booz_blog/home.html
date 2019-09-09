@@ -1,17 +1,9 @@
-<!DOCTYPE html>
-<head>
-    {% if title %}
-        <title>Booz-Blog - {{ title }}</title>
-    {% else %}
-        <title>Booz Blog</title>
-    {% endif %}
-</head>
-<body>
-    
-    {% for post in posts %} 
+{% extends "booz_blog/base.html"%}
+{% comment %} overrides the block content of parent template {% endcomment %}
+{% block content %}
+    {% for post in posts %}
         <h1>{{ post.title }}</h1>
-        <p>By {{ post.author }} on {{ post.date_posted }}</p> 
+        <p>By {{ post.author }} on {{ post.date_posted }}</p>
         <p>{{ post.content }}</p>
     {% endfor %}
-</body> 
-</html>
+{% endblock content %}
