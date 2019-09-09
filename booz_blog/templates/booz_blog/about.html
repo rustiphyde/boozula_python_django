@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <head>
-    <title></title>
+        {% if title %}
+        <title>Booz-Blog - {{ title }}</title>
+    {% else %}
+        <title>Booz Blog</title>
+    {% endif %}
 </head>
 <body>
     <h1>Booz-Blog About Page!</h1>    
