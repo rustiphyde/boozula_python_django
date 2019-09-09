@@ -1,0 +1,14 @@
+<!-- base.html file is the parent for template inheritance -->
+<!DOCTYPE html>
+<head>
+        {% if title %}
+        <title>Booz-Blog - {{ title }}</title>
+    {% else %}
+        <title>Booz Blog</title>
+    {% endif %}
+</head>
+<body>
+    <!-- blocks are created between curly braces and percent signs-->
+    {% block content %}{% endblock %}
+</body>
+</html>
