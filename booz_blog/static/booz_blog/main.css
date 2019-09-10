@@ -16,6 +16,11 @@ body {
     color: #69490d;
   }
 
+  .logofont {
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 1.5em;
+  }
+
   ul {
     margin: 0;
   }
