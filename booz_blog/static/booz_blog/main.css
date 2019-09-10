@@ -13,7 +13,12 @@ body {
   }
 
   a:hover {
-    color: #69490d;
+    color: #7e654d;
+  }
+
+  .form-control:focus{
+    border-color: #c4b7aa !important;
+    box-shadow: 0 0 0 0.2rem rgba(252, 126, 1, 0.25) !important;
   }
 
   .logofont {
@@ -21,8 +26,24 @@ body {
     font-size: 1.5em;
   }
 
+  
+
+  .btn-outline-info{
+    color: #804b06;
+    border-color: #af6825;
+  }
+
+  .btn-outline-info:hover{
+    background-color: #7e654d;
+    border-color: #e27d1f;
+  }
+
   ul {
     margin: 0;
+  }
+  
+  input:-internal-autofill-selected{
+    background-color: #c4b7aa !important;
   }
   
   .bg-beer {
@@ -44,7 +65,7 @@ body {
   .content-section {
     background: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #dddddd;
+    border: 1px solid #c4b7aa;
     border-radius: 3px;
     margin-bottom: 20px;
   }
@@ -71,7 +92,7 @@ body {
   .article-metadata {
     padding-bottom: 1px;
     margin-bottom: 4px;
-    border-bottom: 1px solid #e3e3e3
+    border-bottom: 1px solid #c4b7aa
   }
   
   .article-metadata a:hover {
