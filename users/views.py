@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from .forms import UserRegisterForm
 
 def register(request):
@@ -14,6 +15,10 @@ def register(request):
         form = UserRegisterForm()
     return render(request, 'users/register.html', {'form': form})
 
+# login decorator that ensures a user is logged in to view the profile page
+@login_required
+def profile(request):
+    return render(request, 'users/profile.html')
 # messages.debug
 # messages.info
 # messages.success
