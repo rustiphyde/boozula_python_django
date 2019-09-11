@@ -1,0 +1,21 @@
+{% extends "booz_blog/base.html"%}
+{% comment %} overrides the block content of parent template {% endcomment %}
+{% block content %}
+    <article class="media content-section">
+        <img src="{{ object.image.url }}" class="rounded-corner article-img">
+        <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ object.author }}</a>
+                <small class="text-muted">{{ object.date_posted|date:"F d, Y" }}</small>
+            </div>
+            <h2 class="article-title">::{{ object.title }}::</h2>
+            <hr />
+            <p class="article-content"><em><strong>Main Alcohol:</strong></em> {{ object.main_alcohol }}</p>
+            <hr />
+            <p class="article-content"><em><strong>Ingredients:</strong></em> 
+                                                                               {{ object.ingredients }}</p>
+            <hr />
+            <p class="article-content"><em><strong>Preparation:</strong></em> {{ object.preparation }}</p>
+        </div>
+    </article>
+{% endblock content %}

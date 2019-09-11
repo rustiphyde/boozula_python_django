@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Post
 from .forms import PicUpdateForm
 from django.contrib import messages
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 
 def home(request):
     context = {
@@ -16,6 +16,9 @@ class PostListView(ListView):
     # set variable from object_list to posts
     context_object_name = 'posts'
     ordering = ['-date_posted']
+    
+class PostDetailView(DetailView):
+    model = Post
     
 def about(request):
     return render(request, 'booz_blog/about.html', {'title': 'About'})
