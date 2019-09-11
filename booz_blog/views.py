@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Post
 from django.contrib import messages
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (
     ListView, 
     DetailView, 
@@ -23,7 +24,7 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
     
-class PostCreateView(CreateView):
+class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
     fields = ['image', 'title', 'main_alcohol', 'ingredients', 'preparation']
     
