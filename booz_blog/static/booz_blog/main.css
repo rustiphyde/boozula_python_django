@@ -36,8 +36,23 @@ body {
     border-color: #af6825;
   }
 
+  .btn-info{
+    border-color: #af6825;
+    background-color: #7e654d;
+  }
+  
+  .btn-info:hover {
+    border-color: #af6825;
+    background-color: #d47c08;
+  }
+
   .btn-outline-info:hover{
     background-color: #7e654d;
+    border-color: #e27d1f;
+  }
+
+  .btn-outline-info:focus, .btn-outline-info:not(:disabled):not(.disabled):active{
+    background-color: #d47c08;
     border-color: #e27d1f;
   }
 
