@@ -6,7 +6,8 @@ from django.views.generic import (
     ListView, 
     DetailView, 
     CreateView,
-    UpdateView
+    UpdateView,
+    DeleteView
 )
 
 def home(request):
@@ -46,6 +47,17 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
         if self.request.user == post.author:
             return True
         return False
+
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+    model = Post
+    success_url = '/'
+    
+    def test_func(self):
+        post = self.get_object()
+        if self.request.user == post.author:
+            return True
+        return False
+    
     
 def about(request):
     return render(request, 'booz_blog/about.html', {'title': 'About'})
