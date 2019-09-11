@@ -4,6 +4,7 @@ from django import forms
 from django.utils import timezone
 from django.contrib.auth.models import User
 from PIL import Image
+from django.urls import reverse
 from django.contrib.auth.forms import UserCreationForm
 
 
@@ -29,3 +30,6 @@ class Post(models.Model):
             output_size = (300, 300)
             img.thumbnail(output_size)
             img.save(self.image.path)
+            
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'pk': self.pk})
