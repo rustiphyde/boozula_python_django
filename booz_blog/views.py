@@ -22,6 +22,7 @@ class PostListView(ListView):
     # set variable from object_list to posts
     context_object_name = 'posts'
     ordering = ['-date_posted']
+    paginate_by = 4
     
 class PostDetailView(DetailView):
     model = Post
@@ -48,7 +49,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
             return True
         return False
 
-class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DetailView):
+class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     success_url = '/'
     
