@@ -2,15 +2,15 @@
 {% extends "booz_blog/base.html" %}
 {% block content %}
     <div class="content-section">
-         <form method="POST" enctype="multipart/form-data">
+         <form method="POST">
         {% csrf_token %}
         <fieldset class="form-group">
           <legend class="border-bottom mb-4">Empty Boozula</legend>
-          <h2>Are you sure you want to empty the "{{ object.title }}" Boozula? This action is irreversable.</h2>
+          <h3>Are you sure you want to empty the "{{ object.title }}" Boozula? This action is irreversable.</h3>
         </fieldset>
         <div class="form-group">
-          <a class="btn btn-outline-secondary" href="{% url 'post-detail' object.id %}">Nevermind</a>
-          <button class="btn btn-outline-danger" type="submit">Empty It!</button>
+          <a class="btn btn-secondary" href="{% url 'post-detail' object.id %}">Nevermind</a>
+          <button class="btn btn-danger" type="submit">Empty It!</button>
         </div>
       </form>
     </div>
