@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from .models import Post
 from .forms import PicUpdateForm
 from django.contrib import messages
+from django.views.generic import ListView
 
 def home(request):
     context = {
@@ -9,6 +10,12 @@ def home(request):
     }
     return render(request, 'booz_blog/home.html', context)
 
+class PostListView(ListView):
+    model = Post
+    template_name='booz_blog/home.html'
+    # set variable from object_list to posts
+    context_object_name = 'posts'
+    
 def about(request):
     return render(request, 'booz_blog/about.html', {'title': 'About'})
 
