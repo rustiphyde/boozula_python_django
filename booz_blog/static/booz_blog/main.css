@@ -26,7 +26,10 @@ body {
     font-size: 1.5em;
   }
 
-  
+  .rounded-corner {
+    border-radius: 16% !important;
+    border: 2px solid #7e654d;
+  }
 
   .btn-outline-info{
     color: #804b06;
@@ -65,8 +68,8 @@ body {
   .content-section {
     background: #ffffff;
     padding: 10px 20px;
-    border: 1px solid #c4b7aa;
-    border-radius: 3px;
+    border: 6px double #c4b7aa;
+    border-radius: 16px;
     margin-bottom: 20px;
   }
   
@@ -84,8 +87,8 @@ body {
   }
   
   .article-img {
-    height: 80px;
-    width: 80px;
+    height: 128px;
+    width: 128px;
     margin-right: 16px;
   }
   
