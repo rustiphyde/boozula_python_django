@@ -4,8 +4,10 @@ bandit==1.6.2
 boto3==1.9.227
 botocore==1.12.227
 colorama==0.4.1
+dj-database-url==0.5.0
 Django==2.2.5
 django-crispy-forms==1.7.2
+django-heroku==0.3.1
 django-storages==1.7.2
 docutils==0.15.2
 dodgy==0.1.9
@@ -20,6 +22,7 @@ pbr==5.4.3
 pep8-naming==0.4.1
 Pillow==6.1.0
 prospector==1.1.7
+psycopg2==2.8.3
 pycodestyle==2.4.0
 pydocstyle==4.0.1
 pyflakes==1.6.0
